@@ -11,3 +11,4 @@ A collection of Python scripts exploring data analysis, loops, and probability s
 - **climate_analyzer.py**: Compares 12-month climate datasets (`climate_data.csv`) between Auckland and Shenzhen to calculate annual averages, seasonal swings, and hemispheric temperature gaps.
 - **climate_chart.py**: Plots a dual time-series line graph comparing 12 months of Auckland and Shenzhen temperatures from `climate_data.csv` using Python `turtle`.
 - **trend_predictor.py**: Implements Ordinary Least Squares linear regression ($y = mx + c$) and Pearson correlation ($r$) from scratch to predict exam scores from study hours.
+- **regression_plot.py**: Renders a visual scatter plot, Least Squares line of best fit ($y = mx + c$), and predicted outcome point using Python `turtle`.
