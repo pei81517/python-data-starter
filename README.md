@@ -10,3 +10,4 @@ A collection of Python scripts exploring data analysis, loops, and probability s
 - **pie_visual.py**: Renders a live 2D geometric animation using Python `turtle` to visualize Monte Carlo dart throws inside and outside an inscribed circle.
 - **climate_analyzer.py**: Compares 12-month climate datasets (`climate_data.csv`) between Auckland and Shenzhen to calculate annual averages, seasonal swings, and hemispheric temperature gaps.
 - **climate_chart.py**: Plots a dual time-series line graph comparing 12 months of Auckland and Shenzhen temperatures from `climate_data.csv` using Python `turtle`.
+- **trend_predictor.py**: Implements Ordinary Least Squares linear regression ($y = mx + c$) and Pearson correlation ($r$) from scratch to predict exam scores from study hours.
