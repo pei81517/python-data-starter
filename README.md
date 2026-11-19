@@ -13,6 +13,10 @@ A collection of Python scripts exploring data analysis, loops, and probability s
 - **trend_predictor.py**: Implements Ordinary Least Squares linear regression ($y = mx + c$) and Pearson correlation ($r$) from scratch to predict exam scores from study hours.
 - **regression_plot.py**: Renders a visual scatter plot, Least Squares line of best fit ($y = mx + c$), and predicted outcome point using Python `turtle`.
 - **aukland_vs_shenzhen.py**: Analyzes 12-month climate data with `pandas` and generates a high-resolution comparison chart using `matplotlib`.
-
+- **monty_hall.py**: Simulates 10,000 rounds of the Monty Hall game show problem to prove mathematically why switching doors wins ~66.7% of the time vs. ~33.3% when staying.
 ### Featured Visualization: Auckland vs. Shenzhen Temperature
 ![Auckland vs Shenzhen Temperature](auckland_vs_shenzhen.png)
+
+### Featured Visualization: Monty Hall Simulation
+
+![Monty Hall Simulation Results](monty_hall_results.png)
