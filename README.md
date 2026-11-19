@@ -20,3 +20,9 @@ A collection of Python scripts exploring data analysis, loops, and probability s
 ### Featured Visualization: Monty Hall Simulation
 
 ![Monty Hall Simulation Results](monty_hall_results.png)
+## Men's 100m World Record Progression (1912–2009)
+Using `pandas` and `scikit-learn`, this project analyzes ratified electronic/official Men's 100m world records and fits a linear regression trendline to project future performance.
+
+* **Key Findings:** Record times dropped from 10.60s (1912) to Usain Bolt's 9.58s (2009), reaching an average speed of 10.44 m/s. While a straight-line trend projects 9.54s by 2028, real human sprinting speed approaches a biological limit.
+* **Notebook:** [`100m_world_record_analysis_ipynb_.ipynb`](./100m_world_record_analysis_ipynb_.ipynb)
+![Men's 100m World Record Progression](./100m_progression.png)
