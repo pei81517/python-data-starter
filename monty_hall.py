@@ -1,25 +1,25 @@
 import random
 import matplotlib.pyplot as plt
 
-trials = 10000
+trials = 100000
 stay_wins = 0
 switch_wins = 0
 
 for _ in range(trials):
-    # 3 doors: 1 car (prize), 2 goats
-    doors = ["goat", "goat", "car"]
+    # 4 doors: 1 car (prize), 3 goats
+    doors = ["goat", "goat", "car", "goat"]
     random.shuffle(doors)
 
-    # Player picks a random door (0, 1, or 2)
-    player_choice = random.randint(0, 2)
+    # Player picks a random door (0, 1, 2 or 3)
+    player_choice = random.randint(0, 3)
 
     # Host opens a remaining door that has a goat
-    remaining_doors = [i for i in range(3) if i != player_choice and doors[i] == "goat"]
+    remaining_doors = [i for i in range(4) if i != player_choice and doors[i] == "goat"]
     host_opens = random.choice(remaining_doors)
 
     # The other unopened door if the player switches
-    switch_choice = [i for i in range(3) if i != player_choice and i != host_opens][0]
-
+    switch_choice = random.choice([i for i in range(4) if i != player_choice and i != host_opens])
+   
     if doors[player_choice] == "car":
         stay_wins += 1
     if doors[switch_choice] == "car":
@@ -38,7 +38,7 @@ win_rates = [stay_pct, switch_pct]
 
 plt.figure(figsize=(7, 5))
 bars = plt.bar(strategies, win_rates, color=["#e74c3c", "#2ecc71"], width=0.5)
-plt.title("Monty Hall Problem: 10,000 Simulated Games", fontsize=13, fontweight="bold")
+plt.title("Monty Hall Problem: 100,000 Simulated Games", fontsize=13, fontweight="bold")
 plt.ylabel("Win Percentage (%)")
 plt.ylim(0, 80)
 
