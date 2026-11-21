@@ -27,3 +27,9 @@ Using `pandas` and `scikit-learn`, this project analyzes ratified electronic/off
 * **Key Findings:** Record times dropped from 10.60s (1912) to Usain Bolt's 9.58s (2009), reaching an average speed of 10.44 m/s. While a straight-line trend projects 9.54s by 2028, real human sprinting speed approaches a biological limit.
 * **Notebook:** [`100m_world_record_analysis_ipynb_.ipynb`](./100m_world_record_analysis_ipynb_.ipynb)
 ![Men's 100m World Record Progression](./100m_progression.png)
+
+### TCM Clinical Case Exam Trainer (`tcm_exam_trainer.py`)
+An interactive command-line study tool built to train Traditional Chinese Medicine (TCM) pattern differentiation and herbal formula prescription.
+* **Structured Clinical Records:** Stores multi-attribute case dictionaries (`category`, `symptoms`, `tongue_pulse`, `pattern`, `formula`, and clinical rationale).
+* **Dual-Criteria Grading & Normalization:** Standardizes user text input (`clean_text`) to combine flexible keyword matching for diagnostic patterns with exact matching for classical formulas.
+* **Adaptive Mastery Retry Queue:** Uses a `while`-loop spaced-repetition queue and `random.shuffle` to randomize case order and re-test only missed cases until 100% mastery is achieved, tracking first-attempt exam accuracy.
