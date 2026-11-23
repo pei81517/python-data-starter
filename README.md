@@ -33,3 +33,9 @@ An interactive command-line study tool built to train Traditional Chinese Medici
 * **Structured Clinical Records:** Stores multi-attribute case dictionaries (`category`, `symptoms`, `tongue_pulse`, `pattern`, `formula`, and clinical rationale).
 * **Dual-Criteria Grading & Normalization:** Standardizes user text input (`clean_text`) to combine flexible keyword matching for diagnostic patterns with exact matching for classical formulas.
 * **Adaptive Mastery Retry Queue:** Uses a `while`-loop spaced-repetition queue and `random.shuffle` to randomize case order and re-test only missed cases until 100% mastery is achieved, tracking first-attempt exam accuracy.
+  
+### Smart Exam Score & Study Hour Optimizer (`study_forecaster.py`)
+A greedy optimization model that allocates a limited pre-exam study budget across multiple subjects to maximize overall grade improvement.
+* **Diminishing Marginal Returns:** Models realistic study fatigue by decaying each subject's hourly grade gain by 10% per consecutive hour (`0.9 ** hours`)
+* **Target-Weighted Greedy Allocation:** Evaluates marginal score gain per hour across nested subject dictionaries, applying a `1.5x` priority multiplier to subjects below their target grade while capping scores at `100%`
+* **Before-and-After Forecast Reporting:** Generates an aligned CLI summary comparing baseline grades, allocated hours, predicted scores, target completion status, and overall GPA lift
