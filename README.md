@@ -39,3 +39,9 @@ A greedy optimization model that allocates a limited pre-exam study budget acros
 * **Diminishing Marginal Returns:** Models realistic study fatigue by decaying each subject's hourly grade gain by 10% per consecutive hour (`0.9 ** hours`)
 * **Target-Weighted Greedy Allocation:** Evaluates marginal score gain per hour across nested subject dictionaries, applying a `1.5x` priority multiplier to subjects below their target grade while capping scores at `100%`
 * **Before-and-After Forecast Reporting:** Generates an aligned CLI summary comparing baseline grades, allocated hours, predicted scores, target completion status, and overall GPA lift
+
+### Rolling Z-Score Air Quality Anomaly Detector (`anomaly_detector.py`)
+A time-series anomaly detection script that flags sudden environmental pollution spikes from scratch using sliding-window statistics.
+* **Leakage-Free Sliding Windows:** Evaluates each daily PM2.5 reading strictly against the prior 5-day moving baseline (`data[i - window_size : i]`) so extreme spikes do not inflate their own reference mean or standard deviation.
+* **Scratch-Built Z-Score Engine:** Computes rolling mean, population standard deviation, and standardized Z-scores ($Z = \frac{x - \mu}{\sigma}$) using pure Python and the `math` module.
+* **Automated Threshold Alerting:** Flags statistical outliers exceeding $|Z| \ge 2.0$ and outputs an aligned daily diagnostic summary.
