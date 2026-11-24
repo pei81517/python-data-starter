@@ -45,3 +45,8 @@ A time-series anomaly detection script that flags sudden environmental pollution
 * **Leakage-Free Sliding Windows:** Evaluates each daily PM2.5 reading strictly against the prior 5-day moving baseline (`data[i - window_size : i]`) so extreme spikes do not inflate their own reference mean or standard deviation.
 * **Scratch-Built Z-Score Engine:** Computes rolling mean, population standard deviation, and standardized Z-scores ($Z = \frac{x - \mu}{\sigma}$) using pure Python and the `math` module.
 * **Automated Threshold Alerting:** Flags statistical outliers exceeding $|Z| \ge 2.0$ and outputs an aligned daily diagnostic summary.
+
+### Monte Carlo Savings & Goal Risk Simulator (`budget_simulator.py`)
+A stochastic financial forecasting model that runs 5,000 randomized 12-month savings timelines to quantify the probability of hitting a target savings goal under spending volatility.
+* **Gaussian Expense Modeling:** Samples monthly expenditures from a normal distribution (`random.gauss`) with a minimum spending floor (`max(250, ...)`).
+* **Percentile Risk Analysis:** Sorts simulated outcomes to extract `P10` (worst-case), `P50` (median), and `P90` (best-case) ending balances alongside overall goal-completion probability.
